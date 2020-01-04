@@ -8,22 +8,29 @@
 
     <section class="job-form-section job-form-section--compressed">
         <div class="container">
-            <h4 class="heading">Find a <span class="accent">job </span> you will <span class="accent">love</span></h4>
+            <h4 class="heading">Find a job you will love</h4>
             <form id="job-main-form" method="get" action="#" class="job-main-form">
                 <div class="controls">
                     <div class="row align-items-end">
-                        <div class="col-sm-1 col-lg-2"></div>
-                        <div class="col-sm-5 col-lg-4 form-group">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-3 col-md-3 form-group">
                             <label for="profession">Profession</label>
                             <input type="text" id="profession" name="profession"
                                    placeholder="Profession you are looking for" class="form-control">
                         </div>
-                        <div class="col-sm-5 col-lg-4 form-group">
+                        <div class="col-sm-3 col-md-3 form-group">
                             <label for="location">Location</label>
                             <input type="text" id="location" name="location" placeholder="Any particular location?"
                                    value="Bay Area" class="form-control">
                         </div>
-                        <div class="col-sm-1 col-lg-2 form-group">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="experience">Experience</label>
+                                <input type="text" id="experience" name="experience"
+                                       placeholder="Your Experience" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-sm-1 col-md-2 form-group">
                             <button type="submit" name="name"
                                     class="btn btn-outline-white-primary job-main-form__button">
                                 <i class="fa fa-search"></i>
@@ -43,14 +50,17 @@
                         <div class="col-md-12 col-lg-6">
                             <div class="row">
                                 <div class="col-2">
-                                    <img src="{% static 'img/company-1.png' %}"
-                                         alt="Ipsioou " class="img-fluid">
+                                    <img src="{% static 'img/company.png' %}"
+                                          class="img-fluid">
                                 </div>
                                 <div class="col-10">
                                     <h4 class="job__title"><a
                                             href="{% url 'jobs:jobs-detail' job.id %}">{{ job.title }}</a></h4>
                                     <p class="job__company">
                                         {{ job.company_name }}
+                                    </p>
+                                    <p class="job__experience">
+                                        {{ job.experience }}
                                     </p>
                                 </div>
                             </div>
