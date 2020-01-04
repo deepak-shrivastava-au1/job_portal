@@ -10,29 +10,34 @@
     <section class="job-form-section job-form-section--image">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-10 mx-auto">
                     <div class="job-form-box">
-                        <h2 class="heading">Find a <span class="accent">job</span> you will
-                            <span class="accent">love</span>.
-                        </h2>
+                        <h2 class="heading">Find a job you will love</h2>
                         <form id="job-main-form" method="get" action="{% url 'jobs:searh' %}" class="job-main-form">
                             <div class="controls">
                                 <div class="row align-items-center">
-                                    <div class="col-md-5">
+                                    <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label for="profession">Position</label>
+                                        <!-- <label for="profession">Position</label> -->
                                             <input type="text" id="profession" name="position"
                                                    placeholder="Position you are looking for" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-sm-3">
                                         <div class="form-group">
-                                            <label for="location">Location</label>
-                                            <input type="text" id="location" name="location"
-                                                   placeholder="Any particular location?" class="form-control">
+                                            <label style = "display:none" for="location">Location</label>
+                                            <input style = "display:none" type="text" id="location" name="location"
+                                                placeholder="Any particular location?" class="form-control">
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                           <!-- <label for="experience">Experience</label>
+                                            <input type="text" id="experience" name="experience"
+                                                   placeholder="Your Experience" class="form-control">-->
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
                                         <button type="submit"
                                                 class="btn btn-outline-white-primary job-main-form__button">
                                             <i class="fa fa-search"></i>
@@ -56,11 +61,11 @@
                             <div class="top">
                                 <a href="#">
                                     <div class="image">
-                                        <img src="{% static 'img/featured1.jpg' %}" alt="" class="img-fluid">
+                                        <img src="{% static 'img/black&white1.jpg' %}" alt="" class="img-fluid">
                                     </div>
                                     <div class="bg"></div>
                                     <div class="logo">
-                                        <img src="{% static 'img/company-1.png' %}" alt="" style="max-width: 80px;">
+                                        <img src="{% static 'img/company.png' %}" alt="" style="max-width: 80px;">
                                     </div>
                                 </a>
                             </div>
@@ -102,6 +107,9 @@
                                     </h4>
                                     <p class="job__company">
                                         {{ trending.company_name }}
+                                    </p>
+                                    <p class="job__experience">
+                                        {{ trending.experience }}
                                     </p>
                                 </div>
                             </div>
