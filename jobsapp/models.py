@@ -24,9 +24,12 @@ class Job(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     filled = models.BooleanField(default=False)
     salary = models.IntegerField(default=0, blank=True)
+    experience=models.IntegerField(default=0, blank=True)
 
     def __str__(self):
         return self.title
+        return self.location
+        return self.experience
 
 
 class Applicant(models.Model):

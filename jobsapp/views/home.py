@@ -31,7 +31,8 @@ class SearchView(ListView):
 
     def get_queryset(self):
         return self.model.objects.filter(location__contains=self.request.GET['location'],
-                                         title__contains=self.request.GET['position'])
+                                         title__contains=self.request.GET['position'],
+                                         experience__contains=self.request.GET['experience'])
 
 
 class JobListView(ListView):
