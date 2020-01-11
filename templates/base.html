@@ -38,15 +38,137 @@
 <body>
 <!-- navbar-->
 <header class="header">
-    <nav class="navbar navbar-expand-lg" style="background: black;">
-        <div class="container">
+ <meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - Navbar Transition on Scroll</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<style>
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900");
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  color: #6b6b6b;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.hero {
+  position: relative;
+  height: 60vh;
+  z-index: -2;
+  background: url("https://unsplash.it/2000/800?image=563") center top/cover no-repeat;
+}
+.overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+}
+.main-content {
+  background: #f2f2f2;
+}
+section {
+  background: #fff;
+  padding: 4rem 0 7rem;
+}
+section:nth-child(even) {
+  background: #f5f5f5;
+}
+h2,
+h3 {
+  padding: 2rem 0 0.75rem;
+  font-weight: 700;
+  color: #4b4b4b;
+}
+/* ===================================== */
+/* ===== THE INTERESTING STUFF NOW ===== */
+/* ===================================== */
+.navbar {
+  border: none;
+  transition: 0.4s;
+/* --- navbar sizes --- */
+/* --- navbar colors --- */
+}
+.navbar-brand {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #4b4b4b;
+}
+.navbar--size--xl {
+  padding: 4rem 0;
+}
+.navbar--size--lg {
+  padding: 2rem 0;
+}
+.navbar--size--md {
+  padding: 1rem 0;
+}
+.navbar--size--sm {
+  padding: 0;
+}
+.navbar--color--white {
+  background: #fff;
+}
+.navbar--color--primary {
+  background: #37ca7e;
+}
+.navbar--color--secondary {
+  background: #43a6dd;
+}
+.navbar--color--ghost {
+  background: rgba(0,0,0,0.2);
+}
+.navbar--color--ghost .navbar-brand,
+.navbar--color--ghost .navbar-text,
+.navbar--color--ghost a {
+  color: #fff;
+}
+
+ul.navbar-nav.ml-auto {
+    display: inline-block;
+    float: right;
+    margin-top: -90px;
+}
+a.nav-link {
+    margin-top: 24px;
+    /* font-weight: 600; */
+    font-size: 12px !important;
+}
+a.btn.navbar-btn.btn-outline-light.mb-5.mb-lg-0 {
+    margin-top: 48px !important;
+    border: 1px white solid;
+}
+img.d-none.d-lg-block {
+    margin-left: -525px;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+
+
+<nav class="navbar navbar-fixed-top navbar--color--ghost navbar--size--xl" data-startColor="navbar--color--ghost" data-startSize="navbar--size--xl" data-intoColor="navbar--color--secondary" data-intoSize="navbar--size--md">
+<div class="container">
             <a href="/" class="navbar-brand">
-                <h3 style="color: white;">Marktine</h3>
-                <span class="sr-only">Home</span>
+                <img src="{% static 'img/logo-small.png' %}" alt="logo" class="d-none d-lg-block">
+               
             </a>
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars"></i>
+                    class="navbar-toggler navbar-toggler-right">
             </button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
@@ -66,7 +188,8 @@
                                class="nav-link dropdown-toggle has-img mb-3 mb-lg-0 mt-3 mt-lg-0">
                                 <div class="client-menu-image">
                                     <div class="inner">
-                                        <img src="../static/img/company.png"
+                                        <img src="{% static 'img/company-1.png' %}"
+                                             alt="company image"
                                              class="img-fluid">
                                     </div>
                                 </div>
@@ -91,7 +214,7 @@
                                class="nav-link dropdown-toggle has-img mb-3 mb-lg-0 mt-3 mt-lg-0">
                                 <div class="client-menu-image">
                                     <div class="inner">
-                                        <img src="{% static 'img/user.png' %}"
+                                        <img src="{% static 'img/company-1.png' %}"
                                              alt="company image"
                                              class="img-fluid">
                                     </div>
@@ -126,7 +249,70 @@
                 </ul>
             </div>
         </div>
-    </nav>
+</nav>
+
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-30d18ea41045577cdb11c797602d08e0b9c2fa407c8b81058b1c422053ad8041.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+<script id="rendered-js">
+// grabbing the class names from the data attributes
+const navBar = $('.navbar'),
+data = navBar.data();
+
+// booleans used to tame the scroll event listening a little..
+let scrolling = false,
+scrolledPast = false;
+
+// transition Into
+function switchInto() {
+  // update `scrolledPast` bool
+  scrolledPast = true;
+  // add/remove CSS classes
+  navBar.removeClass(data.startcolor);
+  navBar.removeClass(data.startsize);
+  navBar.addClass(data.intocolor);
+  navBar.addClass(data.intosize);
+  console.log('into transition triggered!');
+};
+
+// transition Start
+function switchStart() {
+  // update `scrolledPast` bool
+  scrolledPast = false;
+  // add/remove CSS classes
+  navBar.addClass(data.startcolor);
+  navBar.addClass(data.startsize);
+  navBar.removeClass(data.intocolor);
+  navBar.removeClass(data.intosize);
+  console.log('start transition triggered!');
+}
+
+// set `scrolling` to true when user scrolls
+$(window).scroll(() => scrolling = true);
+
+setInterval(() => {
+  // when `scrolling` becomes true... 
+  if (scrolling) {
+    // set it back to false
+    scrolling = false;
+    // check scroll position
+    if ($(window).scrollTop() > 100) {
+      // user has scrolled > 100px from top since last check
+      if (!scrolledPast) {
+        switchInto();
+      }
+    } else {
+      // user has scrolled back <= 100px from top since last check
+      if (scrolledPast) {
+        switchStart();
+      }
+    }
+  }
+  // take a breath.. hold event listener from firing for 100ms
+}, 100);
+//# sourceURL=pen.js
+    </script>
 </header>
 <div>
     {% if messages %}
@@ -149,8 +335,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12 mb-5">
-                    <h4 class="h5">About Jobs</h4>
-                    <p> Content writer .............................................................................................<br>..................................................................................... </p>
+                    <!-- <h4 class="h5">About Jobs</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis
+                        aliquet congue. </p> -->
                 </div>
             </div>
         </div>
