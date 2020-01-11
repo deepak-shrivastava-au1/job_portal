@@ -1,0 +1,29 @@
+
+.container-fluid{ 
+    border:gray 1px solid; 
+    height: 600px; 
+    width: 600px;
+    margin-top: 20px;
+}
+.register{
+    font-weight: 600;
+    color:black;
+    text-align: center;
+    margin-top: 2em;
+    
+}
+
+.container-form{
+    text-align: center;
+}
+
+.container-form input{ 
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: black 1px solid;
+    width: 100%; height: 2.7em; 
+}
+.container-form button{ height: 2.7em; width: 100%; margin-top: 20px; background: lightgray;}
+
+.container-signin{margin-top: 10px;}
