@@ -12,6 +12,12 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="job-form-box">
+                        <!-- main search bar styles -->
+                        <style>
+                         
+                        </style>
+                        
+                        
                         <form id="job-main-form" method="get" action="{% url 'jobs:searh' %}" class="job-main-form">
                             <div class="controls">
                                 <div class="row align-items-center">
@@ -23,15 +29,18 @@
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">                                          
-                                            <input onclick="myFunction1()" class="dropbtn1" type="text" id="location" name="location"
-                                                   placeholder="&emsp;Any particular location?" class="">
-                                                   <div id="myDropdown1" class="dropdown-content1">
-                                                    <a href="#">Delhi</a>
-                                                    <a href="#">Mumbai</a>
-                                                    <a href="#">Banglore</a>
-                                                    <a href="#">Jaipur</a>
-                                                    <a href="#">Indore</a>
-                                                  </div>
+                                            <!-- <input class="dropbtn1" type="text" id="location" name="location"
+                                                   placeholder="&emsp;Any particular location?" class=""> -->
+                                            <select name="location" class="dropbtn1">
+                                                <option selected disabled>Location</option>
+                                                <option>Delhi</option>
+                                                <option>Mumbai</option>
+                                                <option>Pune</option>
+                                                <option>Jaipur</option>
+                                                <option>Indore</option>
+                                                <option>Banglore</option>
+                                                <option>Others</option>
+                                            </select>
                                         </div>
                                         <style>
                                             .dropbtn1 {
@@ -40,6 +49,9 @@
                                               padding: 16px;
                                               font-size: 16px;
                                               cursor: pointer;
+                                              width: 220px;
+                                              margin-left: -5px;
+                                              margin-top: 2px;
                                             }
                                             
                                             .dropbtn1:hover, .dropbtn1:focus {
@@ -74,37 +86,21 @@
                                             
                                             .show {display: block;}
                                             </style>
-                                          <script>
-                                            /* When the user clicks on the button, 
-                                            toggle between hiding and showing the dropdown content */
-                                            function myFunction1() {
-                                              document.getElementById("myDropdown1").classList.toggle("show");
-                                            }
-                                            
-                                            // Close the dropdown if the user clicks outside of it
-                                            window.onclick = function(event) {
-                                              if (!event.target.matches('.dropbtn1')) {
-                                                var dropdowns = document.getElementsByClassName("dropdown-content1");
-                                                var i;
-                                                for (i = 0; i < dropdowns.length; i++) {
-                                                  var openDropdown = dropdowns[i];
-                                                  if (openDropdown.classList.contains('show')) {
-                                                    openDropdown.classList.remove('show');
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            </script>
                                     </div>
                                         <div class="col-md-3">
                                         <div class="form-group">                                           
-                                            <input onclick="myFunction()" class="dropbtn" type="text" id="experience" name="experience"
-                                                   placeholder="&emsp;Experience" class="">
-                                                <div id="myDropdown" class="dropdown-content">
-                                                    <a href="#">0 - 1 Years</a>
-                                                    <a href="#">1 - 2 Years</a>
-                                                    <a href="#">2 - 5 Years</a>
-                                                  </div>
+                                            <!-- <input class="dropbtn" type="text" id="experience" name="experience"
+                                                   placeholder="&emsp;Experience" class=""> -->
+                                                <select name="experience" id="experience"   class="dropbtn">Experience
+                                                    <option selected disabled>Experience</option>
+                                                    <option>0-1</option>
+                                                    <option>1-2</option>
+                                                    <option>2-4</option>
+                                                    <option>4-6</option>
+                                                    <option>6-8</option>
+                                                    <option>8-12</option>
+                                                    <option>12+</option>
+                                                </select>
                                            </div>
                                            <style>
                                             .dropbtn {
@@ -113,6 +109,9 @@
                                               padding: 16px;
                                               font-size: 16px;
                                               cursor: pointer;
+                                              width: 220px;
+                                              margin-left: 24px;
+                                              margin-top: 2px;
                                             }
                                             
                                             .dropbtn:hover, .dropbtn:focus {
@@ -146,32 +145,12 @@
                                             .dropdown a:hover {background-color:white;}
                                             
                                             .show {display: block;}
-                                            </style>
-                                          <script>
-                                            /* When the user clicks on the button, 
-                                            toggle between hiding and showing the dropdown content */
-                                            function myFunction() {
-                                              document.getElementById("myDropdown").classList.toggle("show");
-                                            }
                                             
-                                            // Close the dropdown if the user clicks outside of it
-                                            window.onclick = function(event) {
-                                              if (!event.target.matches('.dropbtn')) {
-                                                var dropdowns = document.getElementsByClassName("dropdown-content");
-                                                var i;
-                                                for (i = 0; i < dropdowns.length; i++) {
-                                                  var openDropdown = dropdowns[i];
-                                                  if (openDropdown.classList.contains('show')) {
-                                                    openDropdown.classList.remove('show');
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            </script>
+                                            </style>
                                     </div>
                                     <div class="col-md-2">
                                         <button type="submit"
-                                                class="main_search ">
+                                                class="main_search">
                                             <i class="fa fa-search"></i>
                                         </button>
                                     </div>

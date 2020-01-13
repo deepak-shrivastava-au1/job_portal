@@ -135,7 +135,7 @@ html{height:100%}body{height:100%}header{z-index:1000}section{position:relative;
         }
         i.fa.fa-search {
             font-size: 21px;
-           
+        
         }
         .row.align-items-center #profession{
             width:250px;
@@ -149,8 +149,9 @@ html{height:100%}body{height:100%}header{z-index:1000}section{position:relative;
             width: 85px;
             height: 55px;
             border-left: none;
-            margin-top: -13px;
-            margin-left: 33px;
+            margin-top: -12px;
+            margin-left: 53px;
+            border-top: none;
         }
         .main_search:hover{
             color:#fff;
