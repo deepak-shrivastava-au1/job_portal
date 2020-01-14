@@ -21,12 +21,6 @@
                         <form id="job-main-form" method="get" action="{% url 'jobs:searh' %}" class="job-main-form">
                             <div class="controls">
                                 <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <input type="text" id="profession" name="position"
-                                                   placeholder="&emsp;Position you are looking for" class="">
-                                        </div>
-                                    </div>
                                     <div class="col-md-3">
                                         <div class="form-group">                                          
                                             <!-- <input class="dropbtn1" type="text" id="location" name="location"
@@ -46,46 +40,50 @@
                                             .dropbtn1 {
                                               background-color: white;
                                               color:black;
-                                              padding: 16px;
-                                              font-size: 16px;
+                                              padding: 1em;
+                                              font-size: 1em;
                                               cursor: pointer;
-                                              width: 220px;
-                                              margin-left: -5px;
-                                              margin-top: 2px;
-                                            }
-                                            
-                                            .dropbtn1:hover, .dropbtn1:focus {
-                                              background-color: white;
-                                            }
-                                            
-                                            .dropdown1 {
                                               position: relative;
                                               display: inline-block;
+                                              border: none;
+                                              height: 3.5em;
+                                              width: 10em;
+                                              -webkit-appearance: none;
+                                              padding-left: 1.7em;
+                                              margin-left: 2.5em;
+                                              color: gray;
                                             }
-                                            
-                                            .dropdown-content1 {
-                                              margin-left: 0px;
-                                              display: none;
-                                              position: absolute;
-                                              background-color: #f1f1f1;
-                                              min-width: 200px;
-                                              overflow: auto;
-                                              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                                              z-index: 1;
-                                              
+                                            @media screen and (max-width: 415px){
+                                                .dropbtn1{
+                                                    width: 17em;
+                                                    float: right;
+                                                }
                                             }
-                                            
-                                            .dropdown-content1 a {
-                                              color: black;
-                                              padding: 12px 16px;
-                                              text-decoration: none;
-                                              display: block;
-                                            }
-                                            
-                                            .dropdown1 a:hover {background-color:white;}
-                                            
-                                            .show {display: block;}
                                             </style>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" id="profession" name="position"
+                                                   placeholder="&emsp;Position you are looking for" class="">
+                                    <style>
+                                        #profession{
+                                            border: none;
+                                            padding: 1em;
+                                            height: 3.5em ;
+                                            width: 23.1em ;
+                                            margin-left: -1.1em;
+                                            padding-left: 1em;
+                                            font-size: 1em;
+                                            position: relative;
+                                        }
+                                        @media screen and (max-width: 415px){
+                                                #profession{
+                                                    width: 17em;
+                                                    float: right;
+                                                }
+                                            }
+                                    </style>
+                                        </div>
                                     </div>
                                         <div class="col-md-3">
                                         <div class="form-group">                                           
@@ -105,47 +103,26 @@
                                            <style>
                                             .dropbtn {
                                               background-color: white;
-                                              color:black;
-                                              padding: 16px;
-                                              font-size: 16px;
+                                              padding: 1em;
+                                              font-size: 1em;
                                               cursor: pointer;
-                                              width: 220px;
-                                              margin-left: 24px;
-                                              margin-top: 2px;
-                                            }
-                                            
-                                            .dropbtn:hover, .dropbtn:focus {
-                                              background-color: white;
-                                            }
-                                            
-                                            .dropdown {
+                                              width: 10em;                                              
                                               position: relative;
                                               display: inline-block;
-                                            }
-                                            
-                                            .dropdown-content {
-                                              margin-left: 25px;
-                                              display: none;
-                                              position: absolute;
-                                              background-color: #f1f1f1;
-                                              min-width: 200px;
-                                              overflow: auto;
-                                              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                                              z-index: 1;
+                                              border: none;
+                                              height: 3.5em;
+                                              -webkit-appearance: none;
+                                              margin-left: 3.7em;
+                                              padding-left: 2.2em;
+                                              color: gray;
                                               
                                             }
-                                            
-                                            .dropdown-content a {
-                                              color: black;
-                                              padding: 12px 16px;
-                                              text-decoration: none;
-                                              display: block;
-                                            }
-                                            
-                                            .dropdown a:hover {background-color:white;}
-                                            
-                                            .show {display: block;}
-                                            
+                                            @media screen and (max-width: 415px){
+                                                .dropbtn{
+                                                    width: 17em;
+                                                    float: right;
+                                                }
+                                            } 
                                             </style>
                                     </div>
                                     <div class="col-md-2">
@@ -153,6 +130,35 @@
                                                 class="main_search">
                                             <i class="fa fa-search"></i>
                                         </button>
+                                        <style>
+                                            .main_search{
+                                                height: 3.5em;
+                                                padding: 1em;
+                                                width: 80px;
+                                                background: white;
+                                                border: none;
+                                                margin-top: -16px;
+                                                margin-left: 0px;
+                                                position: relative;
+                                            }
+                                            .fa-search{
+                                                font-size: 1.5em;
+                                                position: relative;
+                                                margin-left: 10px;
+                                                color: gray;
+                                            }
+                                            @media screen and (max-width: 415px){
+                                                .main_search{
+                                                    width: 17em;
+                                                    float: right;
+                                                    background: gray;
+                                                    margin-top: 0px;
+                                                }
+                                                .fa-search{
+                                                    color: black;
+                                                }
+                                            }
+                                        </style>
                                     </div>
                                 </div>
                             </div>
