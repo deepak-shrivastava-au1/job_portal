@@ -9,15 +9,10 @@
     
     <section class="job-form-section job-form-section--image">
         <div class="container">
-            <div class="row">
+            <div class="row main-search">
                 <div class="col-lg-8 mx-auto">
                     <div class="job-form-box">
                         <!-- main search bar styles -->
-                        <style>
-                         
-                        </style>
-                        
-                        
                         <form id="job-main-form" method="get" action="{% url 'jobs:searh' %}" class="job-main-form">
                             <div class="controls">
                                 <div class="row align-items-center">
@@ -50,7 +45,7 @@
                                               width: 9em;
                                               -webkit-appearance: none;
                                               padding-left: 1.7em;
-                                              margin-left: 1.4em;
+                                              margin-left: 0.4em;
                                               color: gray;
                                             }
                                             @media screen and (max-width: 415px){
@@ -71,7 +66,7 @@
                                             padding: 1em;
                                             height: 3.5em ;
                                             width: 20em ;
-                                            margin-left: -1.07em;
+                                            margin-left: -3.17em;
                                             padding-left: 1em;
                                             font-size: 1em;
                                             
@@ -112,7 +107,7 @@
                                               border: none;
                                               height: 3.5em;
                                               -webkit-appearance: none;
-                                              margin-left: 3.7em;
+                                              margin-left: -1.3em;
                                               padding-left: 2.2em;
                                               color: gray;
                                               
@@ -138,9 +133,10 @@
                                                 background: white;
                                                 border: none;
                                                 margin-top: -16px;
-                                                margin-left: 30px;
+                                                margin-left: -4.0em;
                                                 
                                             }
+                                            .main_search:hover{background:black;}
                                             .fa-search{
                                                 font-size: 1.5em;
                                                 position: relative;
@@ -182,7 +178,7 @@
                                     </div>
                                     <div class="bg"></div>
                                     <div class="logo">
-                                        <img src="{% static 'img/company-1.png' %}" alt="" style="max-width: 80px;">
+                                        <img src="{% static 'img/target.png' %}" alt="" style="max-width: 80px;">
                                     </div>
                                 </a>
                             </div>
@@ -215,7 +211,7 @@
                         <div class="col-md-12 col-lg-6">
                             <div class="row">
                                 <div class="col-2">
-                                    <img src="{% static 'img/company-1.png' %}"
+                                    <img src="{% static 'img/target.png' %}"
                                          alt="ShareBoardd " class="img-fluid">
                                 </div>
                                 <div class="col-10">
