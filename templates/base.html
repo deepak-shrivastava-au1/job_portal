@@ -134,7 +134,7 @@
     {% if messages %}
 
         {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <div style="background: gray !important;" class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
                 {{ message }}
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -146,9 +146,9 @@
     {% endif %}
     {% block content %} {% endblock %}
 </div>
-<footer class="footer">
-    <div class="footer__block">
-        <div class="container">
+<footer style="background: gray !important;" class="footer">
+    <div style="background: black !important;" class="footer__block">
+        <div  class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-12 mb-5">
                     <h4 class="h5">About Jobs</h4>
@@ -158,11 +158,11 @@
             </div>
         </div>
     </div>
-    <div class="footer__copyright">
+    <div style="background: gray; color: white;" class="footer__copyright">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-md-left text-center">
-                    <p>&copy;2019 Jobs</p>
+                    <p>&copy; Marktine 2019 Jobs</p>
                 </div>
             </div>
         </div>
