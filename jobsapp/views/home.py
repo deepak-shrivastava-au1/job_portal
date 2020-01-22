@@ -24,6 +24,18 @@ class HomeView(ListView):
         return context
 
 
+class AboutView(ListView):
+    model = Job
+    template_name = 'about.html'
+    context_object_name = 'jobs'
+
+class ContactView(ListView):
+    model = Job
+    template_name = 'contact.html'
+    context_object_name = 'jobs'
+
+  
+
 class SearchView(ListView):
     model = Job
     template_name = 'jobs/search.html'

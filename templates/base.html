@@ -54,11 +54,11 @@
                     <li class="nav-item active">
                         <a href="/" class="nav-link">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                    <li class="nav-item active">
+                        <a href="about" class="nav-link">About-Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="contact" class="nav-link">Contact</a>
                     </li>
                     {% if request.user.is_authenticated and request.user.role == 'employer' %}
                         <li class="nav-item dropdown">
@@ -67,9 +67,7 @@
                                class="nav-link dropdown-toggle has-img mb-3 mb-lg-0 mt-3 mt-lg-0">
                                 <div class="client-menu-image">
                                     <div class="inner">
-                                        <img src="{% static 'img/target.png' %}"
-                                             alt="company image"
-                                             class="img-fluid">
+                                        <img src="{% static 'img/target.png' %}">
                                     </div>
                                 </div>
                                 {% if request.user.role == 'employee' %}
