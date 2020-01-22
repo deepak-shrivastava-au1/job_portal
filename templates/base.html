@@ -46,7 +46,7 @@
                 <span class="sr-only">Home</span>
             </a>
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"
                     class="navbar-toggler navbar-toggler-right">Menu<i class="fa fa-bars"></i>
             </button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
@@ -91,9 +91,7 @@
                                class="nav-link dropdown-toggle has-img mb-3 mb-lg-0 mt-3 mt-lg-0">
                                 <div class="client-menu-image">
                                     <div class="inner">
-                                        <img src="{% static 'img/target.png' %}"
-                                             alt="company image"
-                                             class="img-fluid">
+                                        <img src="{% static 'img/target.png' %}">
                                     </div>
                                 </div>
                                 {% if request.user.role == 'employee' %}
