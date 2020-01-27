@@ -11,6 +11,7 @@ urlpatterns = [
     path('search', SearchView.as_view(), name='searh'),
     path('employer/dashboard/', include([
         path('', DashboardView.as_view(), name='employer-dashboard'),
+        path('', AboutView.as_view(), name='about'),
         path('all-applicants', ApplicantsListView.as_view(), name='employer-all-applicants'),
         path('applicants/<int:job_id>', ApplicantPerJobView.as_view(), name='employer-dashboard-applicants'),
         path('mark-filled/<int:job_id>', filled, name='job-mark-filled'),

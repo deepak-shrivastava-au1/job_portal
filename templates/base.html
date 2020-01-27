@@ -12,6 +12,7 @@
     <!-- Bootstrap CSS-->
     <link rel="stylesheet"
           href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+   
     <!-- Font Awesome CSS-->
     <link rel="stylesheet"
           href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
@@ -61,6 +62,12 @@
                         <a href="contact" class="nav-link">Contact</a>
                     </li>
                     {% if request.user.is_authenticated and request.user.role == 'employer' %}
+                    <li class="nav-item">
+                            <a href="{% url 'jobs:employer-dashboard' %}" class="nav-link">Dashboard</a>
+                        </li>
+                    <li>
+                            <a href="{% url 'jobs:employer-all-applicants' %}" class="nav-link">Applicants </a>
+                    </li>
                         <li class="nav-item dropdown">
                             <a id="clientZone" href="#" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false"
@@ -77,8 +84,6 @@
                                 {% endif %}
                             </a>
                             <div aria-labelledby="clientZone" class="dropdown-menu">
-                                <a href="{% url 'jobs:employer-dashboard' %}" class="dropdown-item">Dashboard</a>
-                                <a href="{% url 'jobs:employer-all-applicants' %}" class="dropdown-item">Applicants </a>
                                 <a href="{% url 'jobs:employer-jobs-create' %}" class="dropdown-item">Post a new
                                     job </a>
                                 <a href="{% url 'accounts:logout' %}" class="dropdown-item">Logout</a>

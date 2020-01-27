@@ -6,178 +6,405 @@
 
 {% block content %}
 
+<head>
+    <link rel="stylesheet"
+    href="{% static 'vendor/bootstrap/css/carousel.scss' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+.card.border-left-primary.shadow.h-100.py-2 {
+   border-radius: 15%;
+}</style>
     <section class="bg-light-gray">
-        <div class="container">
-          <div  class="row">
-                <!-- Jobs (Monthly) Card Example -->
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <div class="card border-left-primary shadow h-100 py-2">
-                    <div  class="card-body">
-                      <div  class="row no-gutters athgn-items-center">
-                        <div class="col md-3">
-                          <div class="Job_Details" >
-                            <span><img style="height: 40px; width: 150px; " src="/static/img/amazon.png"><br>
-                              <h4 style="color: black;">Full Stack Developer</h4>
-                             <h5>Salary : 10LPA</h5>
-                             <h5>Location : Delhi</h5>
-                             <h5>Experience : 4 Years</h5>
-                            </span>
-                            <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
-                             <div class="row">
-                                 <div class="col-sm-4">
-                                     <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
-                                   </div>
-                                 <div class="col-sm-4">
-                                     <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
-                                   </div>
-                                 <div class="col-sm-4">
-                                     <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
-                                   </div>
-                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                   <div class="card border-left-primary shadow h-100 py-2">
-                     <div class="card-body">
-                       <div class="row no-gutters athgn-items-center">
-                           <div class="col md-3">
-                               <div class="Job_Details" >
-                                 <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/flipkart.png"><br>
-                                   <h4 style="color: black;">Python Developer</h4>
-                                  <h5>Salary : 6LPA</h5>
-                                  <h5>Location : Banglore</h5>
-                                  <h5>Experience : 3 Years</h5>                      </span>
-                                 <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
-                                  <div style="margin-bottom: -20px;" class="row">
-                                      <div style="margin-left: 25px;" class="col-sm-3">
-                                          <i style="font-size: 18px;" class="fa fa-eye"></i>
-                                          <label  style="font-size: 14px;">34</label>
-                                        </div>
-                                      <div class="col-sm-3">
-                                          <i style="margin-left: 3px;font-size: 18px;" class="	fa fa-address-book"></i>
-                                          <label style="margin-left: 3px; font-size: 18px;">5</label>
-                                        </div>
-                                      <div class="col-sm-3">
-                                          <i style="margin-left: 8px;font-size: 18px;" class="fa fa-address-card"></i>
-                                          <label style="margin-left: 3px; font-size: 18px;">134</label>
-                                        </div>
-                                  </div>
-                               </div>
-                             </div>
-                       </div>
-                     </div>
-                   </div>
-               </div>
-               <div class="col-xl-3 col-md-6 mb-4">
-                   <div class="card border-left-primary shadow h-100 py-2">
-                     <div class="card-body">
-                       <div class="row no-gutters athgn-items-center">
-                           <div class="col md-3">
-                               <div class="Job_Details" >
-                                 <span><img style="height: 75px; width: 200px; margin-top: -25px; " src="/static/img/reliance.png"><br>
-                                   <h4 style="color: black;">Python Developer</h4>
-                                   <h5>Salary : 6LPA</h5>
-                                   <h5>Location : Banglore</h5>
-                                   <h5>Experience : 3 Years</h5>                      </span>
-                                 <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
-                                  <div style="margin-bottom: -20px;" class="row">
-                                      <div style="margin-left: 25px;" class="col-sm-3">
-                                          <i style="font-size: 18px;" class="fa fa-eye"></i>
-                                          <label  style="font-size: 14px;">34</label>
-                                        </div>
-                                      <div class="col-sm-3">
-                                          <i style="margin-left: 3px;font-size: 18px;" class="	fa fa-address-book"></i>
-                                          <label style="margin-left: 3px; font-size: 18px;">5</label>
-                                        </div>
-                                      <div class="col-sm-3">
-                                          <i style="margin-left: 8px;font-size: 18px;" class="fa fa-address-card"></i>
-                                          <label style="margin-left: 3px; font-size: 18px;">134</label>
-                                        </div>
-                                  </div>
-                               </div>
-                             </div>
-                       </div>
-                     </div>
-                   </div>
-               </div>
-               <div class="col-xl-3 col-md-6 mb-4">
-                   <div class="card border-left-primary shadow h-100 py-2">
-                     <div class="card-body">
-                       <div class="row no-gutters athgn-items-center">
-                           <div class="col md-3">
-                               <div class="Job_Details" >
-                                 <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/Marktine.gif"><br>
-                                   <h4 style="color: black;">Python Developer</h4>
-                                   <h5>Salary : 5LPA</h5>
-                                   <h5>Location : Jaipur</h5>
-                                   <h5>Experience : 2 Years</h5>                      </span>
-                                 <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
-                                  <div style="margin-bottom: -20px;" class="row">
-                                      <div style="margin-left: 25px;" class="col-sm-3">
-                                          <i style="font-size: 18px;" class="fa fa-eye"></i>
-                                          <label  style="font-size: 14px;">34</label>
-                                        </div>
-                                      <div class="col-sm-3">
-                                          <i style="margin-left: 3px;font-size: 18px;" class="	fa fa-address-book"></i>
-                                          <label style="margin-left: 3px; font-size: 18px;">5</label>
-                                        </div>
-                                      <div class="col-sm-3">
-                                          <i style="margin-left: 8px;font-size: 18px;" class="fa fa-address-card"></i>
-                                          <label style="margin-left: 3px; font-size: 18px;">134</label>
-                                        </div>
-                                  </div>
-                               </div>
-                             </div>
-                       </div>
-                     </div>
-                   </div>
-               </div>
-               <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters athgn-items-center">
-                        <div class="col md-3">
-                            <div class="Job_Details" >
-                              <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/Marktine.gif"><br>
-                                <h4 style="color: black;">Python Developer</h4>
-                                <h5>Salary : 5LPA</h5>
-                                <h5>Location : Jaipur</h5>
-                                <h5>Experience : 2 Years</h5>                      </span>
-                              <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
-                               <div style="margin-bottom: -20px;" class="row">
-                                   <div style="margin-left: 25px;" class="col-sm-3">
-                                       <i style="font-size: 18px;" class="fa fa-eye"></i>
-                                       <label  style="font-size: 14px;">34</label>
+      <div class="container-fluid">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div  class="row main">
+                        <!-- Jobs (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                            <div style="border-radius: 25%;"  class="card-body">
+                              <div  class="row no-gutters athgn-items-center">
+                                <div style="text-align: center; margin-top: 20px;" class="col md-3">
+                                  <div class="Job_Details" >
+                                    <span><img style="height: 40px; width: 150px; " src="/static/img/amazon.png"><br>
+                                      <h4 style="color: black;">Full Stack Developer</h4>
+                                     <h5>Salary : 10LPA</h5>
+                                     <h5>Location : Delhi</h5>
+                                     <h5>Experience : 4 Years</h5>
+                                    </span>
+                                    <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                     <div class="row">
+                                         <div class="col-sm-4">
+                                             <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                           </div>
+                                         <div class="col-sm-4">
+                                             <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                           </div>
+                                         <div class="col-sm-4">
+                                             <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                           </div>
                                      </div>
-                                   <div class="col-sm-3">
-                                       <i style="margin-left: 3px;font-size: 18px;" class="	fa fa-address-book"></i>
-                                       <label style="margin-left: 3px; font-size: 18px;">5</label>
-                                     </div>
-                                   <div class="col-sm-3">
-                                       <i style="margin-left: 8px;font-size: 18px;" class="fa fa-address-card"></i>
-                                       <label style="margin-left: 3px; font-size: 18px;">134</label>
-                                     </div>
-                               </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                    </div>
-                  </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div style="padding: 20px;" class="col md-3">
+                                       <div class="Job_Details" >
+                                         <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/flipkart.png"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                          <h5>Salary : 6LPA</h5>
+                                          <h5>Location : Banglore</h5>
+                                          <h5>Experience : 3 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div class="col md-3">
+                                       <div style="padding: 20px;" class="Job_Details" >
+                                         <span><img style="height: 75px; width: 200px; margin-top: -25px; " src="/static/img/reliance.png"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                           <h5>Salary : 6LPA</h5>
+                                           <h5>Location : Banglore</h5>
+                                           <h5>Experience : 3 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div style="padding: 20px;" class="col md-3">
+                                       <div class="Job_Details" >
+                                         <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/Marktine.gif"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                           <h5>Salary : 5LPA</h5>
+                                           <h5>Location : Jaipur</h5>
+                                           <h5>Experience : 2 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                        </div>
+                      </div>
                 </div>
-            </div>
+                <div class="carousel-item">
+                    <div  class="row main">
+                        <!-- Jobs (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                            <div  class="card-body">
+                              <div  class="row no-gutters athgn-items-center">
+                                <div style="padding: 20px;" class="col md-3">
+                                  <div class="Job_Details" >
+                                    <span><img style="height: 40px; width: 150px; " src="/static/img/amazon.png"><br>
+                                      <h4 style="color: black;">Full Stack Developer</h4>
+                                     <h5>Salary : 10LPA</h5>
+                                     <h5>Location : Delhi</h5>
+                                     <h5>Experience : 4 Years</h5>
+                                    </span>
+                                    <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                     <div class="row">
+                                         <div class="col-sm-4">
+                                             <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                           </div>
+                                         <div class="col-sm-4">
+                                             <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                           </div>
+                                         <div class="col-sm-4">
+                                             <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                           </div>
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div style="padding: 20px;" class="col md-3">
+                                       <div class="Job_Details" >
+                                         <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/flipkart.png"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                          <h5>Salary : 6LPA</h5>
+                                          <h5>Location : Banglore</h5>
+                                          <h5>Experience : 3 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div class="col md-3">
+                                       <div style="padding: 20px;" class="Job_Details" >
+                                         <span><img style="height: 75px; width: 200px; margin-top: -25px; " src="/static/img/reliance.png"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                           <h5>Salary : 6LPA</h5>
+                                           <h5>Location : Banglore</h5>
+                                           <h5>Experience : 3 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div style="padding: 20px;" class="col md-3">
+                                       <div class="Job_Details" >
+                                         <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/Marktine.gif"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                           <h5>Salary : 5LPA</h5>
+                                           <h5>Location : Jaipur</h5>
+                                           <h5>Experience : 2 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div  class="row main">
+                        <!-- Jobs (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                          <div class="card border-left-primary shadow h-100 py-2">
+                            <div  class="card-body">
+                              <div  class="row no-gutters athgn-items-center">
+                                <div style="padding: 20px;" class="col md-3">
+                                  <div class="Job_Details" >
+                                    <span><img style="height: 40px; width: 150px; " src="/static/img/amazon.png"><br>
+                                      <h4 style="color: black;">Full Stack Developer</h4>
+                                     <h5>Salary : 10LPA</h5>
+                                     <h5>Location : Delhi</h5>
+                                     <h5>Experience : 4 Years</h5>
+                                    </span>
+                                    <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                     <div class="row">
+                                         <div class="col-sm-4">
+                                             <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                           </div>
+                                         <div class="col-sm-4">
+                                             <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                           </div>
+                                         <div class="col-sm-4">
+                                             <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                           </div>
+                                     </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div style="padding: 20px;" class="col md-3">
+                                       <div class="Job_Details" >
+                                         <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/flipkart.png"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                          <h5>Salary : 6LPA</h5>
+                                          <h5>Location : Banglore</h5>
+                                          <h5>Experience : 3 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div class="col md-3">
+                                       <div style="padding: 20px;" class="Job_Details" >
+                                         <span><img style="height: 75px; width: 200px; margin-top: -25px; " src="/static/img/reliance.png"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                           <h5>Salary : 6LPA</h5>
+                                           <h5>Location : Banglore</h5>
+                                           <h5>Experience : 3 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                       </div>
+                       <div class="col-xl-3 col-md-6 mb-4">
+                           <div class="card border-left-primary shadow h-100 py-2">
+                             <div class="card-body">
+                               <div class="row no-gutters athgn-items-center">
+                                   <div style="padding: 20px;" class="col md-3">
+                                       <div class="Job_Details" >
+                                         <span><img style="height: 45px; width: 200px; margin-top: -10px; " src="/static/img/Marktine.gif"><br>
+                                           <h4 style="color: black;">Python Developer</h4>
+                                           <h5>Salary : 5LPA</h5>
+                                           <h5>Location : Jaipur</h5>
+                                           <h5>Experience : 2 Years</h5>                      </span>
+                                         <p><span style="font-weight: 500;">JD :</span> Skilled in HTML5 and CSS3, JavaScript Must have worked on Python and Django....<span><a href = "#" >Read More...</a></span>
+                                          <div class="row">
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-eye"></i>&nbsp;:&nbsp;34</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="	fa fa-address-book"></i>&nbsp;:&nbsp;5</label>
+                                                </div>
+                                              <div class="col-sm-4">
+                                                  <label><i class="fa fa-address-card"></i>&nbsp;:&nbsp;134</label>
+                                                </div>
+                                          </div>
+                                       </div>
+                                     </div>
+                               </div>
+                             </div>
+                           </div>
+                        </div>
+                      </div>
+                </div>
               </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-        </div>
+      </div>
     </section>
     <section>
         <!-- Content Row -->
    </section>
     <section>
         <div class="container">
-            <div class="row">
+            <div style="overflow: auto;" class="row">
                 <div class="col-lg-12 text-right mb-5">
                     <a href="{% url 'jobs:employer-jobs-create' %}" class="btn btn-outline-white-primary">
                         <i class="fa fa-plus"></i>Add new position
