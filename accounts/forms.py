@@ -220,17 +220,22 @@ class EmployerRegistrationForm(UserCreationForm1):
 
         self.fields['first_name'].widget.attrs.update(
             {
-                'placeholder': 'Enter Company Name',
+                'placeholder': 'Company Name',
             }
         )
         self.fields['last_name'].widget.attrs.update(
             {
-                'placeholder': 'Enter Company Address',
+                'placeholder': 'Company Address',
             }
         )
         self.fields['email'].widget.attrs.update(
             {
-                'placeholder': 'Enter Email',
+                'placeholder': 'Email',
+            }
+        )
+        self.fields['phone_no'].widget.attrs.update(
+            {
+                'placeholder': 'Mobile no.',
             }
         )
         self.fields['password1'].widget.attrs.update(
@@ -243,25 +248,20 @@ class EmployerRegistrationForm(UserCreationForm1):
                 'placeholder': 'Confirm Password',
             }
         )
-        self.fields['phone_no'].widget.attrs.update(
-            {
-                'placeholder': 'enter phone no',
-            }
-        )
         self.fields['website_url'].widget.attrs.update(
             {
-                'placeholder': 'enter phone no',
+                'placeholder': 'Website Url',
             }
         )
         self.fields['founded_by'].widget.attrs.update(
             {
-                'placeholder': 'enter phone no',
+                'placeholder': 'Founded By',
             }
         )
 
         self.fields['founded_year'].widget.attrs.update(
             {
-                'placeholder': 'enter phone no',
+                'placeholder': 'Founded Year',
             }
         )
         self.fields['no_emp'].widget.attrs.update(
