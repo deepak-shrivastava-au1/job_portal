@@ -447,20 +447,34 @@
                             <td>Filling</td>
                             <td>Change State</td>
                         </tr>
+                        {% for job in jobs %}
+
                         <tr>
                             <td>0123</td>
-                            <td>Python Developer</td>
+                            <td><a href="{% url 'jobs:jobs-detail' job.id %}">{{ job.title }}</a></td>
                             <td>4 Years</td>
-                            <td>07/01/2020</td>
-                            <td>07/02/2020</td>
+                            <!-- job created date -->
+                            <td>{{ job.created_at }}</td>
+                            <!-- Last date to apply  -->
+                            <td>{{ job.last_date }}</td>
+                            <!-- No. of Open Position -->
                             <td>5</td>
-                            <td>15</td>
-                            <td>Filling</td>
-                            <td>Change State</td>
+                            <!-- No of Applicants -->
+                            <td>{{ job.applicants.count }}</td>
+                            <td>{% if job.filled %}
+                              <span class="badge badge-success">Filled</span>
+                              {% else %}
+                                  <span class="badge badge-secondary">Not Filled</span>
+                              {% endif %}
+                            </td>
+                            <td><a href="#" class="btn btn-outline-white-secondary">
+                              <i class="fa fa-edit"></i>Change State
+                          </a></td>
                             </tr>
+                            {% endfor %}
                             </thead>
                             <tbody>
-                            {% for job in jobs %}
+                            <!-- {% for job in jobs %}
 
                                 <tr>
                                     <th><a href="{% url 'jobs:jobs-detail' job.id %}">{{ job.title }}</a>
@@ -485,26 +499,25 @@
                                         <a href="#" class="btn btn-outline-white-secondary">
                                             <i class="fa fa-edit"></i>Edit
                                         </a>
-                                        <br>
                                         {% if job.filled %}
                                             <a href="{% url 'jobs:job-mark-filled' job.id %}"
                                                class="btn btn-outline-white-secondary">
                                                 <i class="fa fa-check-circle-o"></i>
                                                 <span class="hidden-xs hidden-sm">Filled</span>
-                                            </a><br>
+                                            </a>
                                         {% else %}
                                             <a href="{% url 'jobs:job-mark-filled' job.id %}"
                                                class="btn btn-outline-white-secondary">
                                                 <i class="fa fa-check-circle-o"></i>
                                                 <span class="hidden-xs hidden-sm">Mark as </span>filled
-                                            </a><br>
+                                            </a>
                                         {% endif %}
                                         <a href="#" class="btn btn-outline-white-secondary">
                                             <i class="fa fa-times-circle-o"></i>Delete
                                         </a>
                                     </td>
                                 </tr>
-                            {% endfor %}
+                            {% endfor %} -->
                             </tbody>
                         </table>
                     </div>

@@ -5,164 +5,169 @@
 {% endblock %}
 
 {% block content %}
-
-    <section class="job-form-section job-form-section--compressed">
-        <div class="container">
-            <div class="row main-search">
-                <div class="col-lg-8 mx-auto">
-                    <div class="job-form-box">                        
-                        <form id="job-main-form" method="get" action="{% url 'jobs:searh' %}" class="job-main-form">
-                            <div class="controls">
-                                <div class="row align-items-center">
-                                    <div class="col-md-3">
-                                        <div class="form-group">                                          
-                                            <!-- <input class="dropbtn1" type="text" id="location" name="location"
-                                                   placeholder="&emsp;Any particular location?" class=""> -->
-                                            <select name="location" class="dropbtn1">
-                                                <option selected disabled>Location</option>
-                                                <option>Delhi</option>
-                                                <option>Mumbai</option>
-                                                <option>Pune</option>
-                                                <option>Jaipur</option>
-                                                <option>Indore</option>
-                                                <option>Banglore</option>
-                                                <option>Others</option>
-                                            </select>
-                                        </div>
-                                        <style>
-                                            .dropbtn1 {
-                                              background-color: white;
-                                              color:black;
-                                              padding: 1em;
-                                              font-size: 1em;
-                                              cursor: pointer;
-                                              position: relative;
-                                              display: inline-block;
-                                              border: none;
-                                              height: 3.5em;
-                                              width: 9em;
-                                              -webkit-appearance: none;
-                                              padding-left: 1.7em;
-                                              margin-left: 0.4em;
-                                              color: gray;
-                                            }
-                                            @media screen and (max-width: 415px){
-                                                .dropbtn1{
-                                                    width: 17em;
-                                                    float: right;
-                                                }
-                                            }
-                                            </style>
+<section class="">
+    <div class="container">
+        <div class="row main-search">
+            <div class="col-lg-8 mx-auto">
+                <div class="job-form-box">                        
+                    <form id="job-main-form" method="get" action="{% url 'jobs:searh' %}" class="job-main-form">
+                        <div class="controls">
+                            <div class="row align-items-center">
+                                <div class="col-md-3">
+                                    <div class="form-group">                                          
+                                        <!-- <input class="dropbtn1" type="text" id="location" name="location"
+                                               placeholder="&emsp;Any particular location?" class=""> -->
+                                        <select name="location" class="dropbtn1">
+                                            <option selected disabled>Location</option>
+                                            <option>Delhi</option>
+                                            <option>Mumbai</option>
+                                            <option>Pune</option>
+                                            <option>Jaipur</option>
+                                            <option>Indore</option>
+                                            <option>Banglore</option>
+                                            <option>Others</option>
+                                        </select>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <input type="text" id="profession" name="position"
-                                                   placeholder="&emsp;Position you are looking for" class="">
                                     <style>
-                                        #profession{
-                                            border: none;
-                                            padding: 1em;
-                                            height: 3.5em ;
-                                            width: 20em ;
-                                            margin-left: -3.17em;
-                                            padding-left: 1em;
-                                            font-size: 1em;
-                                            position: relative;
+                                        .dropbtn1 {
+                                          background-color: white;
+                                          color:black;
+                                          padding: 1em;
+                                          font-size: 1em;
+                                          cursor: pointer;
+                                          position: relative;
+                                          display: inline-block;
+                                          border-right: none;
+                                          height: 3.5em;
+                                          width: 9em;
+                                          -webkit-appearance: none;
+                                          padding-left: 1.7em;
+                                          margin-left: 0.4em;
+                                          color: gray;
                                         }
                                         @media screen and (max-width: 415px){
-                                                #profession{
-                                                    width: 17em;
-                                                    float: right;
-                                                }
+                                            .dropbtn1{
+                                                width: 17em;
+                                                float: right;
                                             }
-                                    </style>
-                                        </div>
-                                    </div>
-                                        <div class="col-md-3">
-                                        <div class="form-group">                                           
-                                            <!-- <input class="dropbtn" type="text" id="experience" name="experience"
-                                                   placeholder="&emsp;Experience" class=""> -->
-                                                <select name="experience" id="experience"   class="dropbtn">Experience
-                                                    <option selected disabled>Experience</option>
-                                                    <option>0-1</option>
-                                                    <option>1-2</option>
-                                                    <option>2-4</option>
-                                                    <option>4-6</option>
-                                                    <option>6-8</option>
-                                                    <option>8-12</option>
-                                                    <option>12+</option>
-                                                </select>
-                                           </div>
-                                           <style>
-                                            .dropbtn {
-                                              background-color: white;
-                                              padding: 1em;
-                                              font-size: 1em;
-                                              cursor: pointer;
-                                              width: 10em;                                              
-                                              position: relative;
-                                              display: inline-block;
-                                              border: none;
-                                              height: 3.5em;
-                                              -webkit-appearance: none;
-                                              margin-left: -1.3em;
-                                              padding-left: 1.2em;
-                                              color: gray;
-                                              
-                                            }
-                                            @media screen and (max-width: 415px){
-                                                .dropbtn{
-                                                    width: 17em;
-                                                    float: right;
-                                                }
-                                            } 
-                                            </style>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button type="submit"
-                                                class="main_search">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                        <style>
-                                            .main_search{
-                                                height: 3.5em;
-                                                padding: 1em;
-                                                width: 80px;
-                                                background: white;
-                                                border: none;
-                                                margin-top: -16px;
-                                                margin-left: -3.9em;
-                                                position: relative;
-                                            }
-                                            .main_search:hover{background:black;}
-                                            .fa-search{
-                                                font-size: 1.5em;
-                                                position: relative;
-                                                margin-left: 10px;
-                                                color: gray;
-                                            }
-                                            @media screen and (max-width: 415px){
-                                                .main_search{
-                                                    width: 17em;
-                                                    float: right;
-                                                    background: gray;
-                                                    margin-top: 0px;
-                                                }
-                                                .fa-search{
-                                                    color: black;
-                                                }
-                                            }
+                                        }
                                         </style>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <input type="text" id="profession" name="position"
+                                               placeholder="&emsp;Position you are looking for" class="">
+                                <style>
+                                    #profession{
+                                       border-left: none;
+                                       border-right: none;
+                                       border-top:1px solid gray;
+                                       border-bottom:1px solid gray;
+                                        padding: 1em;
+                                        height: 3.5em ;
+                                        width: 20em ;
+                                        margin-left: -3.17em;
+                                        padding-left: 1em;
+                                        font-size: 1em;
+                                        position: relative;
+                                    }
+                                    @media screen and (max-width: 415px){
+                                            #profession{
+                                                width: 17em;
+                                                float: right;
+                                            }
+                                        }
+                                </style>
                                     </div>
                                 </div>
+                                    <div class="col-md-3">
+                                    <div class="form-group">                                           
+                                        <!-- <input class="dropbtn" type="text" id="experience" name="experience"
+                                               placeholder="&emsp;Experience" class=""> -->
+                                            <select name="experience" id="experience"   class="dropbtn">Experience
+                                                <option selected disabled>Experience</option>
+                                                <option>0-1</option>
+                                                <option>1-2</option>
+                                                <option>2-4</option>
+                                                <option>4-6</option>
+                                                <option>6-8</option>
+                                                <option>8-12</option>
+                                                <option>12+</option>
+                                            </select>
+                                       </div>
+                                       <style>
+                                        .dropbtn {
+                                          background-color: white;
+                                          padding: 1em;
+                                          font-size: 1em;
+                                          cursor: pointer;
+                                          width: 10em;                                              
+                                          position: relative;
+                                          display: inline-block;
+                                          border-left: none;
+                                          border-right: none;
+                                          height: 3.5em;
+                                          -webkit-appearance: none;
+                                          margin-left: -1.3em;
+                                          padding-left: 1.2em;
+                                          color: gray;
+                                          
+                                        }
+                                        @media screen and (max-width: 415px){
+                                            .dropbtn{
+                                                width: 17em;
+                                                float: right;
+                                            }
+                                        } 
+                                        </style>
+                                </div>
+                                <div class="col-md-2">
+                                    <button type="submit"
+                                            class="main_search">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <style>
+                                        .main_search{
+                                            height: 3.5em;
+                                            padding: 1em;
+                                            width: 80px;
+                                            background: white;
+                                            border-left: none;
+                                            border-right: 1px solid gray;
+                                            border-bottom: 1px solid gray;
+                                            margin-top: -16px;
+                                            margin-left: -3.9em;
+                                            position: relative;
+                                        }
+                                        .main_search:hover{background:black;}
+                                        .fa-search{
+                                            font-size: 1.5em;
+                                            position: relative;
+                                            margin-left: 10px;
+                                            color: gray;
+                                        }
+                                        @media screen and (max-width: 415px){
+                                            .main_search{
+                                                width: 17em;
+                                                float: right;
+                                                background: gray;
+                                                margin-top: 0px;
+                                            }
+                                            .fa-search{
+                                                color: black;
+                                            }
+                                        }
+                                    </style>
+                                </div>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
-    <section>
+    </div>
+</section>
+    <section style="margin-top: -150px;">
         <div class="container">
             <h3 class="heading">We have found <span class="accent">{{ jobs.count }}</span> jobs</h3>
             {% for job in jobs %}
@@ -237,5 +242,5 @@
             {% endif %}
         </div>
     </section>
-
+    
 {% endblock %}
